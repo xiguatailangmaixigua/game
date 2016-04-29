@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="scotchApp">
+	<head>
+		<meta charset="utf-8" />
+		<title>游戏应该管理后台- 豌豆荚</title>
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+      	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+     	<link rel="stylesheet" type="text/css" href="css/main.css">
+     	<script src="js/main.js"></script>
+     	<script src="js/controller.js"></script>
+	</head>
+	<body ng-controller="mainController">
+		<header class="ng-scope">
+			<img src="img/logo.png"/>
+			<h1>游戏应用管理后台</h1>
+		</header>
+		<div class="container">
+			<nav>
+				<ul>
+					<li class="child-level1">
+						<a href="#">关联游戏管理</a>
+					</li>
+					<li class="child-level1">
+						<a href="#about">GV 精选页管理</a>
+					</li>
+					<li class="child-level1">
+						<a href="#contact">二次元 管理</a>
+					</li>
+					<li class="child-level1">
+						<a href="">『游戏类型』管理</a>
+					</li>
+					<li class="child-level1">
+						<a href="">『游戏题材』管理</a>
+					</li>
+					<li class="child-level1">
+						<a href="">『游戏风格』管理</a>
+					</li>
+					<li class="child-level1">
+						<a href="">『隐藏属性管理』</a>
+					</li>
+					<li class="child-level1">
+						<a href="">宣传片管理</a>
+					</li>
+					<li class="child-level1">
+						<a href="">开发者管理</a>
+					</li>
+					<li class="child-level1">
+						<a href="">分类首页管理</a>
+					</li>
+					<li class="child-level1">
+						<a href="">游戏评测</a>
+					</li>
+					<li class="child-level1">
+						<a href="">Game Finder</a>
+					</li>
+					<li class="child-level1">
+						<a href="">运营位管理</a>
+					</li>
+					<li class="parent-level1">
+						<span class="arrow"></span>
+						<span>Game Center</span>
+						<div class="child-level1"><a href="">游戏列表</a></div>
+						<div class="child-level1"><a href="">礼包列表</a></div>
+						<div class="child-level1"><a href="">用户查询</a></div>
+					</li>
+				</ul>
+			</nav>
+			<div class="main">
+				<div ng-view></div>
+			</div>
+		</div>
+		<div class="loading"></div>
+	</body>
+</html>

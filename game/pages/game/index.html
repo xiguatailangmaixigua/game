@@ -1,0 +1,59 @@
+
+		<h1 class="big-title">游戏列表</h1>
+		<form action="" class="mt20">
+			<label for="" class="form-inline-row">
+				<a href="" class="btn">添加游戏</a>
+			</label>
+			<label for="" class="form-inline-row">
+				<select name="" id="" ng-model="listType">
+					<option value="normal">在库</option>
+					<option value="deleted">已删除</option>
+					<option value="new">新上架</option>
+					<option value="dead">已下架</option>
+				</select>
+			</label>
+		</form>
+		<form class="dib">
+			<lable class="form-inline-row">
+				<span class="form-title">游戏包名</span>
+				<input type="text" ng-model="search.pn">
+				<button class="search btn small" ng-click = "queryGame('pn')">搜索</button>
+			</lable>
+		</form>
+		<form action="" class="dib">
+			<label for="" class="form-inline-row">
+				<span class="form-title">游戏名</span>
+				<input type="text" ng-model="search.name">
+				<button class="seach btn small" ng-click="queryGame('name')">搜索</button>
+			</label>
+		</form>
+		<table class="list-table">
+			<tbody>
+				<tr>
+					<th width="30%">游戏名称</th>
+					<th width="30%">游戏包名</th>
+					<th width="20%">关联时间</th>
+					<th width="20%">操作</th>
+				</tr>
+				<tr class="animate-repeat" ng-repeat ="game in games">
+					<td>
+						<span class="link">
+							{{game.title}}
+						</span>
+					</td>
+					<td>{{game.packageName}}</td>
+					<td></td>
+					<td>
+						<span class="alarm">删除</span>
+						<span class="alarm">恢复</span>
+						<span class="link">添加</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			<p class="ng-biding">共有{{}}个游戏，当前 1-10 页</p>
+			<button class="btn small">上一页</button>
+			<button class="btn small">下一页</button>
+		</div>
+	
